@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Chernor Jalloh Week 5- Check out</title>
+    <style media="screen">
+      legend{
+        background-color:rgb(50,50,50);
+        color: white;
+        padding: 0.5em 1 em;
+      }
+      fieldset{width:60%}
+      label{display:block; margin-top:1em;}
+    </style>
+  </head>
+  <body>
+    <h2>Forms practice</h2>
+<form action="info.html" method="get">
+  <fieldset>
+    <legend>Fill up the form</legend>
+    <label>Click Submit to send form   <input type="submit" value="CLICK HERE" onclick="passvalue();"></label>
+  <input type="submit" value="CLICK HERE">
+  <label for="n">Enter your name: <input type="text" name="FullName" id="n" placeholder="Type your full name..."></label>
+  <hr>
+  <script type="text/javascript">
+ function passvalue(){
+   let fullN = document.querySelector('#n').value;
+   localStorage.setItem('full_name',fullN);
+   return false;
+ }
+  </script>
+  <h3>Check your favorite genre</h3>
+  <label><input type="checkbox" name="genre" value="rock">Rock</label>
+  <label><input type="checkbox" name="genre" value="hiphop">hiphop</label>
+  <label><input type="checkbox" name="genre" value="salsa">salsa</label>
+  <label><input type="checkbox" name="genre" value="ragaeton">ragaeton</label>
+  <hr>
+  <h3>How to like JS?</h3>
+  <label><input type="checkbox" name="rate" value="" style="display:none;">&#9734;</label>
+  <h3>Select your age group(one selection):</h3>
+  <input type="radio" name="age" value="18_25">18_25
+  <input type="radio" name="age" value="26_35">26_35
+  <input type="radio" name="age" value="36_50">36_50
+  <input type="radio" name="age" value="50_65">50_65
+  <input type="radio" name="age" value="65_up">65_up
+  <hr>
+  <h3>Select a trip date:</h3>
+  <label>Pick your vacation date: <input type="date" name="vacation_date" ></label>
+  <hr>
+  <label>Create a password: <input type="password" name="password"></label>
+  <hr>
+  <label>Upload your assigment: <input type="file" name="Ipload file" value="UPLOAD"></label>
+  <hr>
+  <label>Enter your email: <input type="email" name="email" ></label>
+  <hr>
+  <label>find in this website: <input type="search" name="search" placeholder="search"></label>
+  <hr>
+  <h3>Do you play any of the following instruments? ONE SELECTION</h3>
+<select name="instruments"  multiple="multiple">
+  <option value="guitar">guitar</option>
+  <option value="Piano">PIANO</option>
+  <option value="Drums">drums</option>
+  <option value="triangle">triangle</option>
+  <option value="keyboard">keyboard</option>
+</select>
+<hr>
+<h3>What to think about HTML, CSS, and JS?</h3>
+<textarea name="comments" rows="8" cols="30" placeholder="Type your comment..."></textarea>
+  </fieldset>
+
+</form>
+  </body>
+</html>
